@@ -1,0 +1,174 @@
+.chif-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.chif-container img {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.chif-container .time-tray {
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.chif-container .player-tray {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+
+.chif-container .audioplayer {
+  display: flex;
+  flex-grow: 1;
+  height: 40px;
+  overflow: hidden;
+}
+
+.chif-container .pButton {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+
+.chif-container .rrButton {
+  height: 40px;
+  width: 30px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+
+.chif-container .ffButton {
+  height: 40px;
+  width: 30px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+
+.chif-container .rr {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chif-container .ff {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chif-container .transcript-button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+
+.chif-container .play {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chif-container .pause {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chif-container .timedisplay {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.chif-container .timeline {
+  flex-grow: 1;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.chif-container .playhead {
+  width: 8px;
+  height: 10px;
+  margin-right: none;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.chif-container .transcript-icon {
+  /* background-image: url("./Images/chear_logo.png");
+  background-color: white;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center; */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chif-container .transcription {
+  overflow: auto;
+  padding: 4px;
+  max-height: 200px;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.chif-container .hidden {
+  display: none;
+}
+
+.chif-container svg {
+  width: 18px;
+  height: auto;
+}
+
+.chif-container svg path {
+  fill: black;
+}
+
