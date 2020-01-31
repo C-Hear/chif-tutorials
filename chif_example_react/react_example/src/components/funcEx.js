@@ -1,16 +1,24 @@
 import React, { useEffect } from 'react';
 
-import chif from '../chif_files/3d167eab-5fa7-432e-b16a-867560ea7b7f_chear.chif';
+import chifv2 from '../chif_files/v2_Example.chif';
+import chifv3 from '../chif_files/v3_Example.chif';
 
 const FuncEx = props => {
-  useEffect(() => {
-    window.chifPlayer.streamFiles();
-  }, []);
-  return (
-    <div class="page">
-      <chear src={chif}></chear>
-    </div>
-  );
+	useEffect(() => {
+		window.chifPlayer.streamFiles();
+	}, []);
+	return (
+		<div class="page">
+			<div className="sep">
+				<h2>CHIF Version 2 Example</h2>
+				<chear src={chifv2}></chear>
+			</div>
+			<div className="sep">
+				<h2>CHIF Version 3 Example</h2>
+				<chear src={chifv3}></chear>
+			</div>
+		</div>
+	);
 };
 
 export default FuncEx;

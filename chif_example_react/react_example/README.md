@@ -1,6 +1,6 @@
 ## CHEAR CHIF Tutorial Example - Reactjs
 
-This is an example of how to implement CHIF files into a react app using class and functional components.
+This is an example of how to implement CHIF files (v2 and v3) into a react app using class and functional components.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

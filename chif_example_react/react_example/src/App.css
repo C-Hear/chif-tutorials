@@ -224,8 +224,28 @@ hr {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+  /* padding-top: 50px; */
 }
-chear {
+.page .sep{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.page .sep h2{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.page .sep chear {
   width: 400px;
 }
 
+@media (max-width: 900px){
+  .page {
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,11 @@
+h2{
+    margin: 20px;
+    text-align: center;
+}
 .chif-container{
-    width: 50%;
+    width: 400px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 @media (max-width: 600px){
     .chif-container{

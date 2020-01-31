@@ -1,6 +1,6 @@
 ## CHEAR CHIF Tutorial Example - Angular
 
-This is an example of how to implement CHIF files into a Angular App.
+This is an example of how to implement CHIF files (v2 and v3) into a Angular App.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="https://chifplayercdn.blob.core.windows.net/player2/chearPlayer_1.0.0.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <script src="https://storage.cloud.google.com/chif-player/chifPlayer-3.0.0.js"></script>
   <link rel="stylesheet" href="./main.css" />
-  <script src="https://chifplayercdn.blob.core.windows.net/player2/chearPlayer_1.0.0.js"></script>
+  <title>CHIF HTML TEST</title>
 </head>
+
 <body>
-  <chear class="chif-1" alt="Whatever text you need SEO to find" src="./example.chif" ></chear>
-  <chear class="chif-2" src="./example.chif" ></chear>
-  <chear class="chif-3" src="./example.chif" ></chear>
+  <div id="root">
+    <h2>CHIF Version 2 Example</h2>
+    <chear src="./CHIF_Files/v2_Example.chif"></chear>
+    <h2>CHIF Version 3 Example</h2>
+    <chear src="./CHIF_Files/v3_Example.chif"></chear>
+  </div>
 </body>
 <script> window.chifPlayer.streamFiles() </script>
-</html>
 
-<img src="whatever_file_path"></img>
-<chear alt="whatever alt text" src="whatever_file_path"></chear>
+</html>
