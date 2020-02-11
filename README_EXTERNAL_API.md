@@ -38,16 +38,7 @@ Once you have token the world is your oyster!
 Download the Following Postman Collection:
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/05ed2698fb9f65e502d4)
-
-| Method | Endpoint                       | Description                           | Body                                                                                                  |
-| ------ | ------------------------------ | ------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| GET    | `/api/users`                   | Returns All Users In the Database.    | null                                                                                                  |
-| GET    | `/api/users/user_id/:id`       | Returns a single user via user id.    | null                                                                                                  |
-| GET    | `/api/users/user_email/:email` | Returns a single user via user email. | null                                                                                                  |
-| PUT    | `/api/users/:id`               | Updates a single user via user id.    | `{ user_name: TEXT, phone: TEXT, name: TEXT, gender: CHARACTER, dob: DATE, organization_code: TEXT }` |
-| POST   | `/api/users`                   | Post a new user.                      | `{ email: TEXT }`                                                                                     |
-| DELETE | `/api/users/:id`               | Delete a single user via user id.     | null                                                                                                  |
-
+                                                                                            
 | Method | Endpoint                       | Description           | Body              |
 | ------ | ------------------------------ | --------------------- | ----------------- |
-| POST   | `/api/access/external/encoder` | Creating a CHIF FILE. | `{ email: TEXT }` |
+| POST   | `/api/access/external/encoder` | Creating a CHIF FILE. | |
