@@ -43,7 +43,7 @@ Open the collection and paste your token in the Authorization Tab - Type Bearer 
 
 <img src="./read_me_imgs/explaination1.jpg">
 
-Domain - [http://manager.c-hear.com](http://manager.c-hear.com)
+Domain - [https://manager.c-hear.com](https://manager.c-hear.com)
 
 | Method | Endpoint                       | Description           | Body              |
 | ------ | ------------------------------ | --------------------- | ----------------- |
