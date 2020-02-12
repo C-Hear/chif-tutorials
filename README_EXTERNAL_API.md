@@ -31,14 +31,25 @@ During the creation process the user will provide token descriptor for personal 
 
 Not all tokens contain the same access as others, All tokens are associated to their parent organization and their payment plan, this determines the tokens ability to access certain features, ( !!! Has Not Deen Determined !!! )
 
-### Accessible Endpoints
+### Accessible ENDPOINTS
 
 Once you have token the world is your oyster!
 
 Download the Following Postman Collection:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/05ed2698fb9f65e502d4)
-                                                                                            
+[![External API Production ENDPOINTS - Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/05ed2698fb9f65e502d4)
+
+Open the collection and paste your token in the Authorization Tab - Type Bearer Token as seen below. Then Replace the necessary parameters for the specific endpoint as seen below.
+
+<img src="./read_me_imgs/explaination1.jpg">
+
+Domain - [http://manager.c-hear.com](http://manager.c-hear.com)
+
 | Method | Endpoint                       | Description           | Body              |
 | ------ | ------------------------------ | --------------------- | ----------------- |
-| POST   | `/api/access/external/encoder` | Creating a CHIF FILE. | |
+| POST   | `/api/access/external/encoder` | Creating a CHIF FILE. |                   |
+| GET   | `/api/access/external/CHIF/metadata/:org_dir/:chif_file` | Receive the CHIF file's metadata content by providing the CHIF file name (name.chif) and the storage directory identifier in which the chif is located as http parameters. The storage directory identifier can be found under the manager library page - details tab. |                   |
+| GET   | `/api/access/external/file_events/:uuid` | Receive the CHIF file's event content in csv format by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
+| GET   | `/api/access/external/exception_file/:uuid` | Receive the CHIF file's Block description by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
+| DELETE   | `/api/access/external/unblock_file/:uuid` | Remove the CHIF file's Block by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
+| POST   | `/api/access/external/block_file/:uuid` | Remove the CHIF file's Block by providing the CHIF file uuid as a http parameter and a body with two key pairs, code and reason, these are both string values self determined by the user. The uuid can be found under the manager library page - details tab | ```{code: string, reason: string}``` |
