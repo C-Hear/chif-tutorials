@@ -1,6 +1,6 @@
 # CHIF Manager External API USAGE Docs
 
-This is the working document for the External Accesbile API
+This is the working document for the Externally Accessible API
 
 ## Getting Started
 
