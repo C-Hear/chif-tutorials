@@ -29,7 +29,7 @@ During the creation process the user will provide token descriptor for personal 
 
 #### Token Authorization Access
 
-Not all tokens contain the same access as others, All tokens are associated to their parent organization and their payment plan, this determines the tokens ability to access certain features, ( !!! Has Not Deen Determined !!! )
+Not all tokens contain the same access as others, All tokens are associated to their parent organization and their payment plan, this determines the tokens ability to access certain features, see plan description for limitations
 
 ### Accessible ENDPOINTS
 
@@ -42,19 +42,32 @@ Download the Following Postman Collection:
 Open the collection and paste your token in the Authorization Tab - Type Bearer Token as seen below. Then Replace the necessary parameters for the specific endpoint as seen below.
 
 ##### Token Example 
-<img src="./read_me_imgs/explaination1.jpg">
+<img src="./read_me_imgs/token.jpg">
 
-##### Encoding Example 
-<img src="./read_me_imgs/Encoding.jpg">
-
-Domain - [http://manager.c-hear.com](http://manager.c-hear.com)
+#### Domain: [https://manager.c-hear.com](https://manager.c-hear.com)
 
 | Method | Endpoint                       | Description           | Body              |
 | ------ | ------------------------------ | --------------------- | ----------------- |
 | POST   | `/api/access/external/encoder` | Creating a CHIF FILE. The response will be a queue job_id which can be used to receive job queue status via the GET `/api/access/external/get_files/:job_ids` Endpoint.  | form-data:  ```{    imageFileName: 'Local Image File', audioFileName: 'Local Audio File', textFileName: 'Local Text File', uploadedCHIFFileNAME: 'File Name',tags: 'Stringified JSON Array',author: 'string',valid_domains: 'Stringified JSON Array',alt: 'string',user: 'Stringified JSON Object (User Defined)',valid_range_start: 'Date Formate (YYYY-MM-DDTHH:MM:SSZ)',valid_range_end: 'Date Formate (YYYY-MM-DDTHH:MM:SSZ)'   }```  |
-| GET   | `/api/access/external/get_files/:job_ids` | Receive the CHIF file's job queue status by placing all of the job queue id's seperated by comma's in the job_ids place, if the job queue is completed it will contain a "state" key with the value "completed" and a "mediaLink" key with the value being the source CHIF url |                   |
-| GET   | `/api/access/external/CHIF/metadata/:org_dir/:chif_file` | Receive the CHIF file's metadata content by providing the CHIF file name (name.chif) and the storage directory identifier in which the chif is located as http parameters. The storage directory identifier can be found under the manager library page - details tab. |                   |
-| GET   | `/api/access/external/file_events/:uuid` | Receive the CHIF file's event content in csv format by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
+| GET   | `/api/access/external/get_files/:job_ids` | Receive the CHIF file's job queue status by placing all of the job queue id's seperated by comma's in the job_ids place, if the job queue is completed it will contain a "state" key with the value "completed" and a "mediaLink" key with the value being the CHIF url source. |                   |
+| GET   | `/api/access/external/metadata/:org_dir/:chif_file` | Receive the CHIF file's metadata content by providing the CHIF file name `name.chif` and the internal storage directory identifier in which the chif is located as http parameters. The storage directory identifier can be found under the manager library page - details tab. |                   |
+| GET   | `/api/access/external/metadata_2` | If you have a local or external chif file's you can access their metadata through this endpoint by providing the files as form-data. The response will consist of an array containing the requested metadata |                   |
+| GET   | `/api/access/external/file_events/:uuid/:name` | Receive the CHIF file's event content in csv format by providing the CHIF file uuid and name as a http parameters. The uuid can be found under the manager library page - details tab |                   |
 | GET   | `/api/access/external/exception_file/:uuid` | Receive the CHIF file's Block description by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
 | DELETE   | `/api/access/external/unblock_file/:uuid` | Remove the CHIF file's Block by providing the CHIF file uuid as a http parameter. The uuid can be found under the manager library page - details tab |                   |
 | POST   | `/api/access/external/block_file/:uuid` | Remove the CHIF file's Block by providing the CHIF file uuid as a http parameter and a body with two key pairs, code and reason, these are both string values self determined by the user. The uuid can be found under the manager library page - details tab | json body: ```{code: string, reason: string}``` |
+
+##### Encoding Example (`/api/access/external/encoder`)
+<img src="./read_me_imgs/Encoding.jpg">
+
+##### Metadata2 Example (`/api/access/external/metadata_2`)
+<img src="./read_me_imgs/metadata2.jpg">
+
+##### Block File Example (`/api/access/external/block_file/:uuid`)
+<img src="./read_me_imgs/block.jpg">
+
+##### File Events Example (`/api/access/external/file_events/:uuid/:name`)
+<img src="./read_me_imgs/events.jpg">
+
+##### File Queue Status Example (`/api/access/external/get_files/:job_ids`)
+<img src="./read_me_imgs/queue.jpg">
