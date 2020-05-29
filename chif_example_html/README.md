@@ -2,5 +2,4 @@
 
 This is an example of how to implement CHIF files (v2 and v3) into a HTML page.
 
-Open the index.html page in a browser to view the page.
-
+Start a local server in the chif_example_html directory and open a browser with the local server localhost path as the url. The index.html page should be displayed whit 2 CHIFS.
